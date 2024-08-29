@@ -38,6 +38,16 @@ export const LessonButton = ({
     } else {
         indentationLevel =  cycleIndex - 8
     }
+    //cycleLength = 8
+    //initialpt = 0
+    //lastpt = cycleLength - 1
+    //mid = (initialpt + lastpt)/2 
+    //if (initialpt < mid)
+    // Position= Position+1
+    //else if(initialpt > mid)
+    // Position= Position-1
+    //else
+    // Position
 
     const rightPosition = indentationLevel * 40
 
