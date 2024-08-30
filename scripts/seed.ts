@@ -96,11 +96,25 @@ const main = async () => {
           question: 'Which one of these is "the man"?',
           order: 1,
         },
+        {
+          id: 2,
+          lessonId: 1, //Nouns
+          type: "ASSIST",
+          question: '"the man"',
+          order: 2,
+        },
+        {
+          id: 3,
+          lessonId: 1, //Nouns
+          type: "SELECT",
+          question: 'Which one of these is "the robot"?',
+          order: 3,
+        },
       ])
 
       await db.insert(schema.challengeOptions).values([
         {
-          id: 1,
+          
           challengeId: 1,
           imageSrc: "/man.svg",
           text: "el hombre",
@@ -108,7 +122,7 @@ const main = async () => {
           correct: true,
         },
         {
-          id: 2,
+          
           challengeId: 1,
           imageSrc: "/woman.svg",
           text: "la mujer",
@@ -116,12 +130,62 @@ const main = async () => {
           correct: false,
         },
         {
-          id: 3,
+          
           challengeId: 1,
           imageSrc: "/robot.svg",
           text: "el robot",
           audioSrc: "/es_robot.mp3",
           correct: false,
+        },
+      ])
+      await db.insert(schema.challengeOptions).values([
+        {
+          
+          challengeId: 2,
+          text: "el hombre",
+          audioSrc: "/es_man.mp3",
+          correct: true,
+        },
+        {
+          
+          challengeId: 2,
+          text: "la mujer",
+          audioSrc: "/es_woman.mp3",
+          correct: false,
+        },
+        {
+          
+          challengeId: 2,
+          text: "el robot",
+          audioSrc: "/es_robot.mp3",
+          correct: false,
+        },
+        
+      ])
+      await db.insert(schema.challengeOptions).values([
+        {
+          
+          challengeId: 3,
+          imageSrc: "/man.svg",
+          text: "el hombre",
+          audioSrc: "/es_man.mp3",
+          correct: false,
+        },
+        {
+          
+          challengeId: 3,
+          imageSrc: "/woman.svg",
+          text: "la mujer",
+          audioSrc: "/es_woman.mp3",
+          correct: false,
+        },
+        {
+          
+          challengeId: 3,
+          imageSrc: "/robot.svg",
+          text: "el robot",
+          audioSrc: "/es_robot.mp3",
+          correct: true,
         },
       ])
 
