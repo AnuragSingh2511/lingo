@@ -1,7 +1,7 @@
 import { act, cache } from "react";
 import db from "@/db/drizzle";
 import { auth } from "@clerk/nextjs/server";
-import { eq } from "drizzle-orm";
+import { eq,desc } from "drizzle-orm";
 import { userProgress, courses, units, challengeProgress, lessons } from "./schema";
 
 export const getUserProgress = cache(async () => {
@@ -19,7 +19,11 @@ export const getUserProgress = cache(async () => {
             activeCourseId: userProgress.activeCourseId,
             hearts: userProgress.hearts,
             points: userProgress.points,
-            // Include any fields from the courses table you need
+            activeCourse: {
+                id: courses.id,
+                title: courses.title,
+                imageSrc: courses.imageSrc,
+            },
         })
         .from(userProgress)
         .where(eq(userProgress.userId, userId))
@@ -204,3 +208,24 @@ export const getLessonPercentage = cache(async (id?: number) => {
 
 return percentage;
 })
+
+export const getTopTenUsers = cache(async () => {
+    const { userId } = await auth();
+
+    if (!userId) {
+        return [];
+    }
+
+    const data = await db
+        .select({
+            userId: userProgress.userId,
+            userName: userProgress.userName,
+            userImageSrc: userProgress.userImageSrc,
+            points: userProgress.points,
+        })
+        .from(userProgress)
+        .orderBy(desc(userProgress.points))
+        .limit(10);
+
+    return data;
+});

@@ -38,7 +38,7 @@ export const PracticeModal = () => {
         <DialogHeader>
             <div className="flex items-center w-full justify-center mb-5">
                 <Image 
-                src="heart.svg"
+                src="/heart.svg"
                 alt="Heart"
                 height={100}
                 width={100}
