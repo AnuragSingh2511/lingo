@@ -71,19 +71,19 @@ const main = async () => {
         {
           id: 3,
           unitId: 1, // Unit 1 learn the basics...
-          title: "Nouns",
+          title: "Verbs",
           order: 3,
         },
         {
           id: 4,
           unitId: 1, // Unit 1 learn the basics...
-          title: "Nouns",
+          title: "Verbs",
           order: 4,
         },
         {
           id: 5,
           unitId: 1, // Unit 1 learn the basics...
-          title: "Nouns",
+          title: "Verbs",
           order: 5,
         },
       ])
@@ -186,6 +186,30 @@ const main = async () => {
           text: "el robot",
           audioSrc: "/es_robot.mp3",
           correct: true,
+        },
+      ])
+
+      await db.insert(schema.challenges).values([
+        {
+          id: 4,
+          lessonId: 2, //Verbs
+          type: "SELECT",
+          question: 'Which one of these is "the man"?',
+          order: 1,
+        },
+        {
+          id: 5,
+          lessonId: 2, //Verbs
+          type: "ASSIST",
+          question: '"the man"',
+          order: 2,
+        },
+        {
+          id: 6,
+          lessonId: 2, //Verbs
+          type: "SELECT",
+          question: 'Which one of these is "the robot"?',
+          order: 3,
         },
       ])
 

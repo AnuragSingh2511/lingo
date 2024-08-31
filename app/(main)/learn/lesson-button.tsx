@@ -96,6 +96,7 @@ export const LessonButton = ({
                          size="rounded"
                          variant={locked ? "locked" : "secondary"}
                          className="w-[70px] h-[70px] border-b-8"
+                         
                         >
                          <Icon 
                          className={cn(
@@ -113,7 +114,7 @@ export const LessonButton = ({
                     <Button
                          size="rounded"
                          variant={locked ? "locked" : "secondary"}
-                         className="w-[ 70px] h-[70px] border-b-8"
+                         className="w-[70px] h-[70px] border-b-8"
                         >
                          <Icon 
                          className={cn(
