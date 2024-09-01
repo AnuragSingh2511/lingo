@@ -31,7 +31,7 @@ export const UnitBanner = ({
             className="hidden xl:flex border-2 border-b-4
             active:border-b-2"
             >
-                <NotepadText className="mr-2 " />
+                <NotepadText className="mr-2" />
               Continue
             </Button>
             </Link>

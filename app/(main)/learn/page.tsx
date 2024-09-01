@@ -11,6 +11,8 @@ import {
 } from "@/db/queries";
 import { redirect } from "next/navigation";
 import { Unit } from "./unit";
+import { Promo } from "@/components/promo";
+import { Quests } from "@/components/quests";
 
 const LearnPage = async () => {
     
@@ -43,7 +45,8 @@ const LearnPage = async () => {
     if (!activeCourse) {
         redirect("/courses");
     }
-
+    
+    // const isPro = !!userSubscription?.isActive;  //for future subscription
     return (
         <div className="h-screen flex flex-row-reverse gap-[48px] px-6">
             <StickyWrapper>
@@ -53,6 +56,9 @@ const LearnPage = async () => {
                     points={userProgress.points}
                     hasActiveSubscription={false}
                 />
+
+                <Promo />
+                <Quests points={userProgress.points} />
             </StickyWrapper>
             <FeedWrapper>
                 <Header title={activeCourse.title} />

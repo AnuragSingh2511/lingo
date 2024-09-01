@@ -166,6 +166,7 @@ userSubscription,
           numberOfPieces={500}
           tweenDuration={10000}
           />
+          <div className="w-full h-[70vh] flex items-center justify-center">
           <div className="flex flex-col gap-y-4 lg:gap-y-8 max-w-lg mx-auto text-center items-center justify-center h-full">
              <Image 
              src="/finish.svg"
@@ -195,6 +196,7 @@ userSubscription,
                />
              </div>
           </div>
+        </div>
           <Footer
           lessonId={lessonId}
           disabled={pending || !selectedOption}
@@ -217,7 +219,7 @@ userSubscription,
         hasActiveSubscription={!!userSubscription?.isActive}
 
          />
-         <div className="flex h-screen items-center justify-center">
+         <div className="flex h-[70vh] items-center justify-center">
           <div className="h-full flex items-center justify-center">
             <div className="lg:min-h-[350px] lg:w-[600px] w-full px-6 lg:px-0 flex flex-col gap-y-12"> 
               <h1 className="text-lg lg:text-3xl text-center lg:text-start font-bold text-neutral-700 flex justify-center items-center">
