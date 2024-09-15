@@ -32,6 +32,4 @@ Lingo offers a platform where users can:
 - Utilized Server Actions in Next.js to improve application performance and security
 - Created a visually appealing and responsive user interface using ShadcnUI and Tailwind CSS
 
-## Project Status
 
-Live
