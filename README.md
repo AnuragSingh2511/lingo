@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lingo
 
-## Getting Started
+Lingo is a language learning SaaS application designed to provide an engaging and interactive experience for users looking to master new languages.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Lingo offers a platform where users can:
+- Select from various language courses
+- Participate in guided lessons
+- Interact with engaging characters
+- Experience immersive audio-visual effects
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Interactive Lessons**: Guided language learning with engaging design and characters
+- **Audio-Visual Experience**: Enhance learning through immersive audio and visual effects
+- **Course Selection**: Users can choose from multiple language courses
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technology Stack
 
-## Learn More
+- **Frontend**: React with Next.js
+- **Backend**: Next.js for server-side logic
+- **Database**: PostgreSQL for relational data storage
+- **ORM**: Drizzle for seamless database interactions
+- **UI Components**: ShadcnUI for visually appealing interfaces
+- **Styling**: Tailwind CSS for responsive design
 
-To learn more about Next.js, take a look at the following resources:
+## Technical Highlights
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Leveraged the latest features of React and Next.js for a scalable and efficient web application
+- Implemented Drizzle ORM to enhance data management and retrieval processes
+- Utilized Server Actions in Next.js to improve application performance and security
+- Created a visually appealing and responsive user interface using ShadcnUI and Tailwind CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Project Status
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Live
