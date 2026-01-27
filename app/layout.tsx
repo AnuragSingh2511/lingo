@@ -6,6 +6,7 @@ import { ClerkProvider } from '@clerk/nextjs';
 import { ExitModal } from "@/components/modals/exit-modal.";
 import { HeartsModal } from "@/components/modals/hearts-modal";
 import { PracticeModal } from "@/components/modals/practice-modal";
+import { Analytics } from "@vercel/analytics/next"
 
 const font = Nunito({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body className={font.className}>
+        <Analytics />
         <Toaster />
         < ExitModal />
         < HeartsModal />
